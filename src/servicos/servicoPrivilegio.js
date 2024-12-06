@@ -1,38 +1,38 @@
-const urlBase = 'https://sistema-backend2.vercel.app/categorias';
+const urlBase = 'https://sistema-backend2.vercel.app/privilegios';
 
-export async function gravarCategoria(categoria){
+export async function gravarPrivilegio(privilegio){
     const resposta = await fetch(urlBase,{
         'method':"POST",
         'headers': { 
             'Content-Type':"application/json"
         },
-        'body': JSON.stringify(categoria)
+        'body': JSON.stringify(privilegio)
     });
     const resultado = await resposta.json();
     return resultado;
 }
 
-export async function alterarCategoria(categoria){
-    const resposta = await fetch(urlBase + "/" + categoria.codigo,{
+export async function alterarPrivilegio(privilegio){
+    const resposta = await fetch(urlBase + "/" + privilegio.codigo,{
         'method':"PUT",
         'headers': { 
             'Content-Type':"application/json"
         },
-        'body': JSON.stringify(categoria)
+        'body': JSON.stringify(privilegio)
     });
     const resultado = await resposta.json();
     return resultado;
 }
 
-export async function excluirCategoria(categoria){
-    const resposta = await fetch(urlBase + "/" + categoria.codigo,{
+export async function excluirPrivilegio(privilegio){
+    const resposta = await fetch(urlBase + "/" + privilegio.codigo,{
         'method':"DELETE"
     });
     const resultado = await resposta.json();
     return resultado;
 }
 
-export async function consultarCategoria() {
+export async function consultarPrivilegio() {
     const resposta = await fetch(urlBase,{
         'method':"GET"
     });

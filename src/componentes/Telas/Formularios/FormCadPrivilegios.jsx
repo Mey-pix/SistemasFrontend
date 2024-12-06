@@ -1,10 +1,10 @@
-import { Button, Spinner, Col, Form, InputGroup,Row } from 'react-bootstrap';
+import { Button, Spinner, Col, Form, InputGroup, Row } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-import { alterarCategoria, gravarCategoria } from '../../../servicos/servicoCategoria';
+import { alterarPrivilegio, gravarPrivilegio } from '../../../servicos/servicoPrivilegio';
 import toast, {Toaster} from 'react-hot-toast';
 
-export default function FormCadCategorias(props) {
-const [categoria, setCategoria] = useState(props.categoriaSelecionado);
+export default function FormCadPrivilegios(props) {
+const [privilegio, setPrivilegio] = useState(props.privilegioSelecionado);
 const [formValidado, setFormValidado] = useState(false);
 
    // Função para manipular a submissão do formulário
@@ -12,37 +12,36 @@ function manipularSubmissao(evento) {
    const form = evento.currentTarget;
    if (form.checkValidity()) {
        // Formatar a data de validade para o formato "yyyy-mm-dd"
-       const dataValidadeFormatada = new Date(categoria.dataValidade).toLocaleDateString('pt-BR');
-       categoria.dataValidade = dataValidadeFormatada;
+       const dataValidadeFormatada = new Date(privilegio.dataValidade).toLocaleDateString('pt-BR');
+       privilegio.dataValidade = dataValidadeFormatada;
 
        if (!props.modoEdicao) {
-           // Cadastrar o categoria
-           gravarCategoria(categoria)
+           // Cadastrar o privilegio
+           gravarPrivilegio(privilegio)
                .then((resultado) => {
                    if (resultado.status) {
                        props.setExibirTabela(true);
-                   } 
-                   else {
+                   } else {
                        toast.error(resultado.mensagem);
                    }
                });
        } else {
-           // Editar o categoria
-           alterarCategoria(categoria)
+           // Editar o privilegio
+           alterarPrivilegio(privilegio)
                .then((resultado) => {
                    if (resultado.status) {
-                       props.setListaDeCategorias(
-                           props.listaDeCategorias.map((item) => {
-                               if (item.codigo !== categoria.codigo) return item;
-                               else return categoria;
+                       props.setListaDePrivilegios(
+                           props.listaDePrivilegios.map((item) => {
+                               if (item.codigo !== privilegio.codigo) return item;
+                               else return privilegio;
                            })
                        );
 
                        // Após a alteração, resetar o estado para o modo de adição
                        props.setModoEdicao(false); // Mudar para o modo de adicionar
                        
-                       // Resetar o categoria selecionado
-                       props.setCategoriaSelecionado({
+                       // Resetar o privilegio selecionado
+                       props.setPrivilegioSelecionado({
                            codigo: 0,
                            descricao: ""
                        });
@@ -64,7 +63,7 @@ function manipularSubmissao(evento) {
 function manipularMudanca(evento) {
    const elemento = evento.target.name;
    const valor = evento.target.value;
-   setCategoria({ ...categoria, [elemento]: valor });
+   setPrivilegio({ ...privilegio, [elemento]: valor });
 }
 
 return (
@@ -78,11 +77,11 @@ return (
                    type="text"
                    id="codigo"
                    name="codigo"
-                   value={categoria.codigo}
+                   value={privilegio.codigo}
                    disabled={props.modoEdicao}
                    onChange={manipularMudanca}
                />
-               <Form.Control.Feedback type='invalid'>Por favor, informe o código do categoria!</Form.Control.Feedback>
+               <Form.Control.Feedback type='invalid'>Por favor, informe o código do privilegio!</Form.Control.Feedback>
            </Form.Group>
        </Row>
        <Row className="mb-4">
@@ -93,10 +92,10 @@ return (
                    type="text"
                    id="descricao"
                    name="descricao"
-                   value={categoria.descricao}
+                   value={privilegio.descricao}
                    onChange={manipularMudanca}
                />
-               <Form.Control.Feedback type="invalid">Por favor, informe a descrição do categoria!</Form.Control.Feedback>
+               <Form.Control.Feedback type="invalid">Por favor, informe a descrição do privilegio!</Form.Control.Feedback>
            </Form.Group>
        </Row>
        <Row className='mt-2 mb-2'>
