@@ -1,7 +1,7 @@
 {
   "name": "sistema",
   "version": "0.1.0",
-  "homepage": "https://Mey-pix.github.io/SistemaFrontend",
+  "homepage": "https://Mey-pix.github.io/SistemasFrontend",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.4.0",

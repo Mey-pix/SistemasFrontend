@@ -1,7 +1,9 @@
 import { Button, Container, Table } from "react-bootstrap";
-import { excluirUsuario } from "../../../servicos/servicoUsuario";
+import { consultarUsuario, excluirUsuario } from "../../../servicos/servicoUsuario";
+import { useEffect } from "react";
 
 export default function TabelaUsuarios(props) {
+    
 
     function editarUsuario(usuario){
         props.setModoEdicao(true);
@@ -52,6 +54,7 @@ export default function TabelaUsuarios(props) {
                         <th>Nome</th>
                         <th>Telefone</th>
                         <th>Endereço</th>
+                        <th>Privilegios</th>
                         <th>Ações</th>
                     </thead>
                     <tbody>
@@ -64,6 +67,7 @@ export default function TabelaUsuarios(props) {
                                         <td>{usuario.nome}</td>
                                         <td>{usuario.telefone}</td>
                                         <td>{usuario.endereco}</td>
+                                        <td>{usuario.privilegios.codigo}</td>
                                         <td>
                                             <Button onClick={()=>{
                                                 editarUsuario(usuario);
