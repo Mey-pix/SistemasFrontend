@@ -1,11 +1,11 @@
 export const usuarios = [
     {
         "codigo": 1,
-        "email":"umaPessoa@gmail.com",
-        "senha":"123",
-        "nome": "Uma Pessoa Aleatoria",
-        "telefone": "00028922",
-        "endereco":"uma rua qualquer",
+        "email":"alanzoka123@gmail.com",
+        "senha":"111",
+        "nome": "Alan",
+        "telefone": "99102345",
+        "endereco":"Rua das Andorinhas",
         "privilegios":
         {
             "codigo": 1,
@@ -14,11 +14,11 @@ export const usuarios = [
     },
     {
         "codigo": 2,
-        "email":"kleber@gmail.com",
-        "senha":"456",
-        "nome": "Kleber da Silva",
-        "telefone": "00000000",
-        "endereco":"não se lembra",
+        "email":"carlinhosdaora@gmail.com",
+        "senha":"222",
+        "nome": "Carlos",
+        "telefone": "32226678",
+        "endereco":"Rua de Judas",
         "privilegios": {
             "codigo": 2,
             "descricao":"gerente"
@@ -26,11 +26,11 @@ export const usuarios = [
     },
     {
         "codigo": 3,
-        "email":"admin@gmail.com",
+        "email":"adminastror@gmail.com",
         "senha":"admin",
         "nome": "admin",
-        "telefone": "00000000",
-        "endereco":"não se lembra",
+        "telefone": "32226969",
+        "endereco":"Rua Washington",
         "privilegios":{
             "codigo": 3,
             "descricao":"administrador"

@@ -1,18 +1,18 @@
 export const clientes = [
     {
         "codigo": 1,
-        "nome": "Antonio da Silva",
-        "endereco": "casa dele",
-        "telefone": "40028922",
-        "email": "antonio@gmail.com"
+        "nome": "Arthur",
+        "endereco": "Bairro Belo",
+        "telefone": "99123456",
+        "email": "arthur@gmail.com"
         
     },
     {
         "codigo": 2,
-        "nome": "Marta da Silva",
-        "endereco": "casa do seu antonio",
-        "telefone": "40028922",
-        "email": "martinha@gmail.com"
+        "nome": "Alice",
+        "endereco": "Nao dado",
+        "telefone": "991016789",
+        "email": "alice@gmail.com"
         
     }
 ]

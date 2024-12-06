@@ -1,5 +1,5 @@
 import { Alert } from "react-bootstrap";
-import FormCadPrivilegios from "./Formularios/FormCadPrivilegio";
+import FormCadPrivilegios from "./Formularios/FormCadPrivilegios";
 import Pagina from "../layouts/Pagina";
 import { useEffect, useState } from "react";
 import TabelaPrivilegios from "./Tabelas/TabelaPrivilegios";
