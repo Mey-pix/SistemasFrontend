@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Mey-pix/SistemasFrontend.git/static/css/main.d221dc40.css",
-    "main.js": "/Mey-pix/SistemasFrontend.git/static/js/main.82580fa8.js",
-    "static/media/pagina404.png": "/Mey-pix/SistemasFrontend.git/static/media/pagina404.4bf0805d8d55a31c5142.png",
-    "index.html": "/Mey-pix/SistemasFrontend.git/index.html",
-    "main.d221dc40.css.map": "/Mey-pix/SistemasFrontend.git/static/css/main.d221dc40.css.map",
-    "main.82580fa8.js.map": "/Mey-pix/SistemasFrontend.git/static/js/main.82580fa8.js.map"
+    "main.css": "/SistemasFrontend/static/css/main.d221dc40.css",
+    "main.js": "/SistemasFrontend/static/js/main.52b46206.js",
+    "static/media/pagina404.png": "/SistemasFrontend/static/media/pagina404.4bf0805d8d55a31c5142.png",
+    "index.html": "/SistemasFrontend/index.html",
+    "main.d221dc40.css.map": "/SistemasFrontend/static/css/main.d221dc40.css.map",
+    "main.52b46206.js.map": "/SistemasFrontend/static/js/main.52b46206.js.map"
   },
   "entrypoints": [
     "static/css/main.d221dc40.css",
-    "static/js/main.82580fa8.js"
+    "static/js/main.52b46206.js"
   ]
 }
